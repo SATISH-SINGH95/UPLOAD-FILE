@@ -45,8 +45,10 @@ public class FileServiceImpl implements FileService{
         }
 
         // upload file to localSystem / Copy file to localSystem
-        Files.copy(file.getInputStream(), Paths.get(fullPath));
+        //Files.copy(file.getInputStream(), Paths.get(fullPath));  -- we can use this also
+        file.transferTo(new File(fullPath));
 
+    
         return fileName + " Uploaded successfully";
         
        
