@@ -1,4 +1,4 @@
-package com.uploadFile;
+package com.uploadFile.constant;
 
 import java.util.Arrays;
 import java.util.List;
