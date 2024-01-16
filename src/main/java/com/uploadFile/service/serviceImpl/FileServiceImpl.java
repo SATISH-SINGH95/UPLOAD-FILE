@@ -31,8 +31,9 @@ public class FileServiceImpl implements FileService{
         // get original file name from multipartFile
         String fileName = file.getOriginalFilename();
 
-        String extensionOfFile = fileName.substring(fileName.lastIndexOf('.'));
+        String extensionOfFile = fileName.substring(fileName.lastIndexOf('.'));  // will give output as -> .pdf, .docx, .jpeg
 
+        //String extensionOfFile = fileName.substring(fileName.lastIndexOf('.')+1);  // will give output as -> pdf, docx
         //To avoid duplicate name we can use this logic
         String randomId = UUID.randomUUID().toString();
         String fileName1 = randomId.concat(fileName.substring(fileName.lastIndexOf('.')));
